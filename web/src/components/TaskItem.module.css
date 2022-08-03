@@ -1,0 +1,17 @@
+.first-line {
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+}
+
+.task-item__title {
+    display: flex;
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.task-item__completed {
+    text-decoration: line-through;
+}
