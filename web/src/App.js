@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
-import "./App.css";
+import classes from "./App.module.css";
 
 function App() {
   const [todoList, setTodoList] = useState([]);
@@ -94,19 +94,26 @@ function App() {
   };
 
   return (
-    <div className='container'>
-      <TaskForm
-        activeItem={activeItem}
-        onChangeInput={inputChangeHandler}
-        onAddTask={taskSubmitHandler}
-        taskInputRef={taskInputRef}
-      />
-      <TaskList
-        tasks={todoList}
-        onEditTask={editTaskHandler}
-        onDeleteTask={deleteTaskHandler}
-        onToggleComplete={toggleCompleteHandler}
-      />
+    <div className={classes.App}>
+      <div className={classes.title}>
+        <h1>Todo App</h1>
+      </div>
+      <div className={classes["form-wrapper"]}>
+        <TaskForm
+          activeItem={activeItem}
+          onChangeInput={inputChangeHandler}
+          onAddTask={taskSubmitHandler}
+          taskInputRef={taskInputRef}
+        />
+      </div>
+      <div className={classes["list-wrapper"]}>
+        <TaskList
+          tasks={todoList}
+          onEditTask={editTaskHandler}
+          onDeleteTask={deleteTaskHandler}
+          onToggleComplete={toggleCompleteHandler}
+        />
+      </div>
     </div>
   );
 }

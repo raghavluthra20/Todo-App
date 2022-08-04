@@ -1,0 +1,28 @@
+.title {
+  text-align: center;
+}
+.title h1 {
+  font-size: 3rem;
+  font-weight: 350;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.list-wrapper {
+  padding: 0 20rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .list-wrapper {
+    padding: 0 10rem;
+  }
+
+  .form-wrapper {
+    display: block;
+    padding: 0 12rem;
+  }
+}

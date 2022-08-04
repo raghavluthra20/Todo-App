@@ -5,8 +5,8 @@ import Card from "./UI/Card";
 
 const TaskItem = (props) => {
   return (
-    <Card>
-      <div className={classes["task-item"]}>
+    <div className={classes["task-item"]}>
+      <Card>
         <div className={classes["first-line"]}>
           <div className={classes["task-item__title"]}>
               <span className={props.completed ? classes["task-item__completed"] : undefined}>
@@ -21,8 +21,8 @@ const TaskItem = (props) => {
           </div>
         </div>
         <input type='checkbox' checked={props.completed} onChange={props.onToggleComplete} />
-      </div>
-    </Card>
+      </Card>
+    </div>
   );
 };
 

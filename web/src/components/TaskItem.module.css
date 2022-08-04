@@ -1,3 +1,11 @@
+.task-item {
+    color: white;
+}
+
+.task-item :hover {
+    background-color: #F0F0F0;
+}
+
 .first-line {
     display: flex;
     align-items: center;

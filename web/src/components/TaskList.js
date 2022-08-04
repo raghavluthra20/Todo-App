@@ -1,12 +1,11 @@
 import React from "react";
 
-import Card from "./UI/Card";
 import TaskItem from "./TaskItem";
-// import classes from "./TaskList.module.css";
+import classes from "./TaskList.module.css";
 
 const TaskList = (props) => {
   return (
-    <Card>
+    <div className={classes["task-list"]}>
       {props.tasks.map((task, index) => {
         return (
           <TaskItem
@@ -19,7 +18,7 @@ const TaskList = (props) => {
           />
         );
       })}
-    </Card>
+    </div>
   );
 };
 
